@@ -1,6 +1,20 @@
 
-Vue.component("books", {
-
+Vue.component("showbooks", {
+  props: ["books"],
+  template: `
+  <div class="flip-container">
+    <div class="flipper">
+      <div class="front">
+        <img class="portada" :src="books.portada">
+      </div>
+      <div class="back">
+        <p>{{ books.titulo }}</p>
+        <p class="desc">{{ books.descripcion }}</p>
+        <a data-fancybox="gallery" :href="books.detalle"><button>More info</button></a>
+      </div>
+    </div>
+  </div>
+  `
 })
 
 let myApp = new Vue({

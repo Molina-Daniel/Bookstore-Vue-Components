@@ -26,6 +26,10 @@
     </div>
 
     <div class="container">
+      <showbooks v-for="book in searchBooks" :books="book"></showbooks>
+    </div>
+
+    <!-- <div class="container">
       <div v-for="book in searchBooks" class="flip-container">
         <div class="flipper">
           <div class="front">
@@ -38,7 +42,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 
